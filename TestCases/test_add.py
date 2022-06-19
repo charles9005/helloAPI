@@ -1,11 +1,3 @@
-"""
-======================
-Author: 柠檬班-小简
-Time: 2020/7/20 20:20
-Project: day10
-Company: 湖南零檬信息技术有限公司
-======================
-"""
 import unittest
 
 import allure
