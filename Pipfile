@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.douban.com/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+selenium = "*"
+pytest = "*"
+pytest-html = "*"
+pytest-xdist = "*"
+pytest-ordering = "*"
+pytest-rerunfailures = "*"
+allure-pytest = "*"
+pymysql = "*"
+openpyxl = "*"
+jsonpath = "*"
+requests = "*"
+rsa = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"

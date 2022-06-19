@@ -1,0 +1,12 @@
+selenium
+pytest
+pytest-html
+pytest-xdist
+pytest-ordering
+pytest-rerunfailures
+allure-pytest
+pymysql
+openpyxl
+jsonpath
+requests
+rsa
