@@ -3948,3 +3948,165 @@
 2022-06-19 15:21:08,205 py30 INFO handle_requests.py-51 line：响应状态码为：200
 2022-06-19 15:21:08,206 py30 INFO handle_requests.py-52 line：响应数据为：{'code': 0, 'msg': 'OK', 'data': {'id': 15207, 'leave_amount': 600.0, 'mobile_phone': '13593958710', 'reg_name': '美丽可爱的小简', 'reg_time': '2022-06-19 15:21:06.0', 'type': 0}, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved'}
 2022-06-19 15:21:08,207 py30 INFO conftest.py-33 line：************** 接口 结束测试业务流 ************
+2022-06-19 15:54:48,370 py30 INFO conftest.py-18 line：************** 接口 开始测试 ************
+2022-06-19 15:54:48,373 py30 INFO handle_data.py-44 line：正则表达式替换完成之后的请求数据：
+{'case_id': None, 'type': 'before', 'interface': 'login', 'title': '前置操作 - 管理员登陆', 'method': 'post', 'url': '/member/login', 'request_data': '{"mobile_phone":"13234825738","pwd":"123456789"}', 'extract_data': '{"admin_member_id":"$..id","token":"$..token"}', 'expected': None, 'check_sql': None}
+2022-06-19 15:54:48,373 py30 INFO handle_requests.py-33 line：发起一次HTTP请求
+2022-06-19 15:54:48,373 py30 INFO handle_requests.py-41 line：请求头为：{'X-Lemonban-Media-Type': 'lemonban.v3', 'Content-Type': 'application/json'}
+2022-06-19 15:54:48,373 py30 INFO handle_requests.py-42 line：请求方法为：post
+2022-06-19 15:54:48,373 py30 INFO handle_requests.py-43 line：请求url为：http://api.lemonban.com/futureloan/member/login
+2022-06-19 15:54:48,373 py30 INFO handle_requests.py-44 line：请求数据为：{'mobile_phone': '13234825738', 'pwd': '123456789'}
+2022-06-19 15:54:48,435 py30 INFO handle_requests.py-51 line：响应状态码为：200
+2022-06-19 15:54:48,436 py30 INFO handle_requests.py-52 line：响应数据为：{'code': 0, 'msg': 'OK', 'data': {'id': 72, 'leave_amount': 0.0, 'mobile_phone': '13234825738', 'reg_name': '小柠檬', 'reg_time': '2022-06-13 16:55:55.0', 'type': 0, 'token_info': {'token_type': 'Bearer', 'expires_in': '2022-06-19 15:59:49', 'token': 'eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjcyLCJleHAiOjE2NTU2MjU1ODl9.VrTGdpGGxZyMOUmmlTs5AFFUbA1z6ae-8kspWZZd8zSDVzhm4QVud4-Eh-Tcn3Is0WOsFouowy_bq-ScE3SuCQ'}}, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2022-06-19 15:54:48,436 py30 INFO handle_extract_data_from_response.py-23 line：要从响应结果当中提取的数据集为：
+{'admin_member_id': '$..id', 'token': '$..token'}
+2022-06-19 15:54:48,438 py30 INFO handle_extract_data_from_response.py-29 line：设置环境变量.key:admin_member_id,value:72
+2022-06-19 15:54:48,439 py30 INFO handle_extract_data_from_response.py-29 line：设置环境变量.key:token,value:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjcyLCJleHAiOjE2NTU2MjU1ODl9.VrTGdpGGxZyMOUmmlTs5AFFUbA1z6ae-8kspWZZd8zSDVzhm4QVud4-Eh-Tcn3Is0WOsFouowy_bq-ScE3SuCQ
+2022-06-19 15:54:48,453 py30 INFO handle_data.py-44 line：正则表达式替换完成之后的请求数据：
+{'case_id': 1, 'type': 'case', 'interface': 'add', 'title': '加标成功', 'method': 'post', 'url': '/loan/add', 'request_data': '{"member_id":72,"title":"借钱实现财富自由","amount":2000,"loan_rate":12.0,"loan_term":3,"loan_date_type":1,"bidding_days":5}', 'extract_data': None, 'expected': '{"code":0,"msg":"OK"}', 'check_sql': 'SELECT * FROM  futureloan.loan WHERE member_id=72;'}
+2022-06-19 15:54:48,454 py30 INFO handle_requests.py-33 line：发起一次HTTP请求
+2022-06-19 15:54:48,498 py30 INFO handle_requests.py-41 line：请求头为：{'X-Lemonban-Media-Type': 'lemonban.v3', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjcyLCJleHAiOjE2NTU2MjU1ODl9.VrTGdpGGxZyMOUmmlTs5AFFUbA1z6ae-8kspWZZd8zSDVzhm4QVud4-Eh-Tcn3Is0WOsFouowy_bq-ScE3SuCQ'}
+2022-06-19 15:54:48,498 py30 INFO handle_requests.py-42 line：请求方法为：post
+2022-06-19 15:54:48,498 py30 INFO handle_requests.py-43 line：请求url为：http://api.lemonban.com/futureloan/loan/add
+2022-06-19 15:54:48,498 py30 INFO handle_requests.py-44 line：请求数据为：{'member_id': 72, 'title': '借钱实现财富自由', 'amount': 2000, 'loan_rate': 12.0, 'loan_term': 3, 'loan_date_type': 1, 'bidding_days': 5, 'sign': 'YPtk9Xa8v/X0pVqQulcP/DNns7p0qDLHcYH3ZZUK6dTlVbgZdKl6J2LdE/WmqpBu3fqXur7t76RxuXVBWWkVSgygDoYIqdGsM0v2/xSR34JvtBiANeVWZbCkp7rU4ZoiJS0Ed0wdGH4hh3Ln1pgfQdsjjmzwT+ntlqA3L9wE9Fs=', 'timestamp': 1655625288}
+2022-06-19 15:54:48,585 py30 INFO handle_requests.py-51 line：响应状态码为：200
+2022-06-19 15:54:48,586 py30 INFO handle_requests.py-52 line：响应数据为：{'code': 0, 'msg': 'OK', 'data': {'id': 4483, 'member_id': 72, 'title': '借钱实现财富自由', 'amount': 2000.0, 'loan_rate': 12.0, 'loan_term': 3, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2022-06-19 15:54:49.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2022-06-19 15:54:48,648 py30 INFO test_add.py-56 line：数据库查询结果为：
+2022-06-19 15:54:48,649 py30 INFO test_add.py-57 line：{'id': 626, 'member_id': 72, 'title': '借钱实现财富自由', 'amount': Decimal('30000.00'), 'loan_rate': Decimal('12.0'), 'loan_term': 3, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': datetime.datetime(2022, 6, 14, 16, 6, 52), 'bidding_start_time': None, 'full_time': None, 'status': 1}
+2022-06-19 15:54:48,654 py30 INFO handle_data.py-44 line：正则表达式替换完成之后的请求数据：
+{'case_id': 2, 'type': 'case', 'interface': 'add', 'title': '加标失败—借款人id为空', 'method': 'post', 'url': '/loan/add', 'request_data': '{"title":"借钱实现财富自由","amount":2000,"loan_rate":12.0,"loan_term":3,"loan_date_type":1,"bidding_days":5}', 'extract_data': None, 'expected': '{"code":1,"msg":"用户id为空"}', 'check_sql': None}
+2022-06-19 15:54:48,655 py30 INFO handle_requests.py-33 line：发起一次HTTP请求
+2022-06-19 15:54:48,655 py30 INFO handle_requests.py-41 line：请求头为：{'X-Lemonban-Media-Type': 'lemonban.v3', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjcyLCJleHAiOjE2NTU2MjU1ODl9.VrTGdpGGxZyMOUmmlTs5AFFUbA1z6ae-8kspWZZd8zSDVzhm4QVud4-Eh-Tcn3Is0WOsFouowy_bq-ScE3SuCQ'}
+2022-06-19 15:54:48,655 py30 INFO handle_requests.py-42 line：请求方法为：post
+2022-06-19 15:54:48,656 py30 INFO handle_requests.py-43 line：请求url为：http://api.lemonban.com/futureloan/loan/add
+2022-06-19 15:54:48,656 py30 INFO handle_requests.py-44 line：请求数据为：{'title': '借钱实现财富自由', 'amount': 2000, 'loan_rate': 12.0, 'loan_term': 3, 'loan_date_type': 1, 'bidding_days': 5, 'sign': 'VmaS0K+TJszI9+xJBOeD9mK1mSu+Eva5REhs/DEfOLIoLfSB9TVg9eeKoNsgSrwAadw9a73srgjghRwuvgfJp2O4StKoAbLjmHrwCIg1JeKpweRodJRpJDIpwpVkMmVkm8++xIUWcoy4w6lQbMZYePyYaN2Sf42hV2nS9sVWZz4=', 'timestamp': 1655625288}
+2022-06-19 15:54:48,728 py30 INFO handle_requests.py-51 line：响应状态码为：200
+2022-06-19 15:54:48,728 py30 INFO handle_requests.py-52 line：响应数据为：{'code': 1, 'msg': '用户id为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2022-06-19 15:54:48,733 py30 INFO handle_data.py-44 line：正则表达式替换完成之后的请求数据：
+{'case_id': 3, 'type': 'case', 'interface': 'add', 'title': '加标失败—标题为空', 'method': 'post', 'url': '/loan/add', 'request_data': '{"member_id":72,"amount":2000,"loan_rate":12.0,"loan_term":3,"loan_date_type":1,"bidding_days":5}', 'extract_data': None, 'expected': '{"code":1,"msg":"标题为空"}', 'check_sql': None}
+2022-06-19 15:54:48,733 py30 INFO handle_requests.py-33 line：发起一次HTTP请求
+2022-06-19 15:54:48,733 py30 INFO handle_requests.py-41 line：请求头为：{'X-Lemonban-Media-Type': 'lemonban.v3', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjcyLCJleHAiOjE2NTU2MjU1ODl9.VrTGdpGGxZyMOUmmlTs5AFFUbA1z6ae-8kspWZZd8zSDVzhm4QVud4-Eh-Tcn3Is0WOsFouowy_bq-ScE3SuCQ'}
+2022-06-19 15:54:48,734 py30 INFO handle_requests.py-42 line：请求方法为：post
+2022-06-19 15:54:48,734 py30 INFO handle_requests.py-43 line：请求url为：http://api.lemonban.com/futureloan/loan/add
+2022-06-19 15:54:48,734 py30 INFO handle_requests.py-44 line：请求数据为：{'member_id': 72, 'amount': 2000, 'loan_rate': 12.0, 'loan_term': 3, 'loan_date_type': 1, 'bidding_days': 5, 'sign': 'o7uz04P3A3/FsSCB1i2a55Y9JBn5gu8eQ8jXM/UYZKAOTD6U7JChJO7Q1Ivsi/L/9nqbFV7Tn9DX+XrKAA9tOFnWhDy8IEeyT+uxaZTDvLVoUJd995dLlLvGtogFEO71R2zvM3xY1fcp6pLw7gyBV9q1lH+9w6uiVzHsheXKWGw=', 'timestamp': 1655625288}
+2022-06-19 15:54:48,800 py30 INFO handle_requests.py-51 line：响应状态码为：200
+2022-06-19 15:54:48,801 py30 INFO handle_requests.py-52 line：响应数据为：{'code': 1, 'msg': '标题为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2022-06-19 15:54:48,805 py30 INFO handle_data.py-44 line：正则表达式替换完成之后的请求数据：
+{'case_id': 4, 'type': 'case', 'interface': 'add', 'title': '加标失败—借款金额为空', 'method': 'post', 'url': '/loan/add', 'request_data': '{"member_id":72,"title":"借钱实现财富自由","loan_rate":12.0,"loan_term":3,"loan_date_type":1,"bidding_days":5}', 'extract_data': None, 'expected': '{"code":1,"msg":"借款金额为空"}', 'check_sql': None}
+2022-06-19 15:54:48,806 py30 INFO handle_requests.py-33 line：发起一次HTTP请求
+2022-06-19 15:54:48,806 py30 INFO handle_requests.py-41 line：请求头为：{'X-Lemonban-Media-Type': 'lemonban.v3', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjcyLCJleHAiOjE2NTU2MjU1ODl9.VrTGdpGGxZyMOUmmlTs5AFFUbA1z6ae-8kspWZZd8zSDVzhm4QVud4-Eh-Tcn3Is0WOsFouowy_bq-ScE3SuCQ'}
+2022-06-19 15:54:48,806 py30 INFO handle_requests.py-42 line：请求方法为：post
+2022-06-19 15:54:48,807 py30 INFO handle_requests.py-43 line：请求url为：http://api.lemonban.com/futureloan/loan/add
+2022-06-19 15:54:48,807 py30 INFO handle_requests.py-44 line：请求数据为：{'member_id': 72, 'title': '借钱实现财富自由', 'loan_rate': 12.0, 'loan_term': 3, 'loan_date_type': 1, 'bidding_days': 5, 'sign': 'GJaCmd9fscANNlZ6v40QA0p3PmFcuUFiOip8pReSiuFXs2b/+qMvCoxhRmS1DGDoED4a1+hi6C6erU+h2V2Nk9JaK/aEDu7AvAOA3e+36qInEqp97Lgu8qqJFGbWfRktKpydqXJPzf4YLVIb2n3MBU3+G7k8fYQCEEB6IUcau+U=', 'timestamp': 1655625288}
+2022-06-19 15:54:48,862 py30 INFO handle_requests.py-51 line：响应状态码为：200
+2022-06-19 15:54:48,863 py30 INFO handle_requests.py-52 line：响应数据为：{'code': 1, 'msg': '借款金额为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2022-06-19 15:54:48,868 py30 INFO handle_data.py-44 line：正则表达式替换完成之后的请求数据：
+{'case_id': 5, 'type': 'case', 'interface': 'add', 'title': '加标失败—年利率为空', 'method': 'post', 'url': '/loan/add', 'request_data': '{"member_id":72,"title":"借钱实现财富自由","amount":2000,"loan_term":3,"loan_date_type":1,"bidding_days":5}', 'extract_data': None, 'expected': '{"code":1,"msg":"利率为空"}', 'check_sql': None}
+2022-06-19 15:54:48,868 py30 INFO handle_requests.py-33 line：发起一次HTTP请求
+2022-06-19 15:54:48,869 py30 INFO handle_requests.py-41 line：请求头为：{'X-Lemonban-Media-Type': 'lemonban.v3', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjcyLCJleHAiOjE2NTU2MjU1ODl9.VrTGdpGGxZyMOUmmlTs5AFFUbA1z6ae-8kspWZZd8zSDVzhm4QVud4-Eh-Tcn3Is0WOsFouowy_bq-ScE3SuCQ'}
+2022-06-19 15:54:48,869 py30 INFO handle_requests.py-42 line：请求方法为：post
+2022-06-19 15:54:48,869 py30 INFO handle_requests.py-43 line：请求url为：http://api.lemonban.com/futureloan/loan/add
+2022-06-19 15:54:48,869 py30 INFO handle_requests.py-44 line：请求数据为：{'member_id': 72, 'title': '借钱实现财富自由', 'amount': 2000, 'loan_term': 3, 'loan_date_type': 1, 'bidding_days': 5, 'sign': 'vWp6WiWWpdlN5Inb6oasuLclATb87SVc+TKoCpMcUAm1smHUaB7baod3Xr4uQ7MoXMNK5r+aZqbSKaPgqlTAWvvVO1Fu/zR4mU2fZEetO4/M1Q2rNAAZBobcO33bzgpLq74PChZDbmtDhlBHJxxIZbqnkqKYVj5CYAeCEDIIL1A=', 'timestamp': 1655625288}
+2022-06-19 15:54:48,938 py30 INFO handle_requests.py-51 line：响应状态码为：200
+2022-06-19 15:54:48,938 py30 INFO handle_requests.py-52 line：响应数据为：{'code': 1, 'msg': '利率为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2022-06-19 15:54:48,947 py30 INFO handle_data.py-44 line：正则表达式替换完成之后的请求数据：
+{'case_id': 6, 'type': 'case', 'interface': 'add', 'title': '加标失败—借款期限为空', 'method': 'post', 'url': '/loan/add', 'request_data': '{"member_id":72,"title":"借钱实现财富自由","amount":2000,"loan_rate":12.0,"loan_date_type":1,"bidding_days":5}', 'extract_data': None, 'expected': '{"code":1,"msg":"借款期限为空"}', 'check_sql': None}
+2022-06-19 15:54:48,948 py30 INFO handle_requests.py-33 line：发起一次HTTP请求
+2022-06-19 15:54:48,949 py30 INFO handle_requests.py-41 line：请求头为：{'X-Lemonban-Media-Type': 'lemonban.v3', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjcyLCJleHAiOjE2NTU2MjU1ODl9.VrTGdpGGxZyMOUmmlTs5AFFUbA1z6ae-8kspWZZd8zSDVzhm4QVud4-Eh-Tcn3Is0WOsFouowy_bq-ScE3SuCQ'}
+2022-06-19 15:54:48,950 py30 INFO handle_requests.py-42 line：请求方法为：post
+2022-06-19 15:54:48,950 py30 INFO handle_requests.py-43 line：请求url为：http://api.lemonban.com/futureloan/loan/add
+2022-06-19 15:54:48,950 py30 INFO handle_requests.py-44 line：请求数据为：{'member_id': 72, 'title': '借钱实现财富自由', 'amount': 2000, 'loan_rate': 12.0, 'loan_date_type': 1, 'bidding_days': 5, 'sign': 'ZzoH/E989b53o8LSLdHJinfT47XECtCFPaiA+xz87K/O9xvSHdjP7zVFdgF6Nlrk1K91FLtkJJz4zMmV8RVHNwYPeH5v/JeK1la6Whn09IiLMrcBnWPt59AvyetY7GvQT4ll4Uv3V+GqDlNVwrzS6MGm7ZlXq5zkn7ilaDcZnRc=', 'timestamp': 1655625288}
+2022-06-19 15:54:49,022 py30 INFO handle_requests.py-51 line：响应状态码为：200
+2022-06-19 15:54:49,022 py30 INFO handle_requests.py-52 line：响应数据为：{'code': 1, 'msg': '借款期限为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2022-06-19 15:54:49,027 py30 INFO handle_data.py-44 line：正则表达式替换完成之后的请求数据：
+{'case_id': 7, 'type': 'case', 'interface': 'add', 'title': '加标失败—借款期限类型为空', 'method': 'post', 'url': '/loan/add', 'request_data': '{"member_id":72,"title":"借钱实现财富自由","amount":2000,"loan_rate":12.0,"loan_term":3,"bidding_days":5}', 'extract_data': None, 'expected': '{"code":1,"msg":"借款日期类型为空"}', 'check_sql': None}
+2022-06-19 15:54:49,027 py30 INFO handle_requests.py-33 line：发起一次HTTP请求
+2022-06-19 15:54:49,027 py30 INFO handle_requests.py-41 line：请求头为：{'X-Lemonban-Media-Type': 'lemonban.v3', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjcyLCJleHAiOjE2NTU2MjU1ODl9.VrTGdpGGxZyMOUmmlTs5AFFUbA1z6ae-8kspWZZd8zSDVzhm4QVud4-Eh-Tcn3Is0WOsFouowy_bq-ScE3SuCQ'}
+2022-06-19 15:54:49,028 py30 INFO handle_requests.py-42 line：请求方法为：post
+2022-06-19 15:54:49,028 py30 INFO handle_requests.py-43 line：请求url为：http://api.lemonban.com/futureloan/loan/add
+2022-06-19 15:54:49,028 py30 INFO handle_requests.py-44 line：请求数据为：{'member_id': 72, 'title': '借钱实现财富自由', 'amount': 2000, 'loan_rate': 12.0, 'loan_term': 3, 'bidding_days': 5, 'sign': 'uot8PRVeAIkzcx0yemyECLNNVsXL/zmSbqRao2UnKv7dM+Jqhqhn6AiWNr2LbhLkk9uRgTwCaEGbw+kP6MYPNdrCLhyHN7S3EKMLYk7TE3IhmpEe40kXs0PGFrLXOFDsUxz6uKoKtUVqBy6VPatob+1mnZiBh3tNh5LrjbELgbs=', 'timestamp': 1655625289}
+2022-06-19 15:54:49,083 py30 INFO handle_requests.py-51 line：响应状态码为：200
+2022-06-19 15:54:49,083 py30 INFO handle_requests.py-52 line：响应数据为：{'code': 1, 'msg': '借款日期类型为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2022-06-19 15:54:49,089 py30 INFO handle_data.py-44 line：正则表达式替换完成之后的请求数据：
+{'case_id': 8, 'type': 'case', 'interface': 'add', 'title': '加标失败—竞标天数为空', 'method': 'post', 'url': '/loan/add', 'request_data': '{"member_id":72,"title":"借钱实现财富自由","amount":2000,"loan_rate":12.0,"loan_term":3,"loan_date_type":1}', 'extract_data': None, 'expected': '{"code":1,"msg":"竞标期限为空"}', 'check_sql': None}
+2022-06-19 15:54:49,089 py30 INFO handle_requests.py-33 line：发起一次HTTP请求
+2022-06-19 15:54:49,090 py30 INFO handle_requests.py-41 line：请求头为：{'X-Lemonban-Media-Type': 'lemonban.v3', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjcyLCJleHAiOjE2NTU2MjU1ODl9.VrTGdpGGxZyMOUmmlTs5AFFUbA1z6ae-8kspWZZd8zSDVzhm4QVud4-Eh-Tcn3Is0WOsFouowy_bq-ScE3SuCQ'}
+2022-06-19 15:54:49,090 py30 INFO handle_requests.py-42 line：请求方法为：post
+2022-06-19 15:54:49,090 py30 INFO handle_requests.py-43 line：请求url为：http://api.lemonban.com/futureloan/loan/add
+2022-06-19 15:54:49,090 py30 INFO handle_requests.py-44 line：请求数据为：{'member_id': 72, 'title': '借钱实现财富自由', 'amount': 2000, 'loan_rate': 12.0, 'loan_term': 3, 'loan_date_type': 1, 'sign': 'CTJPUCJJ1pYWWwNhKFo7KHwfK02QnOEZE1HVp5wHrygrGoLKjm10n6ZaQLiHnwKyBkASGsR2/o0GbOfNZSX3LUXHCfezUOEyx2+p6iyt3eSafH3aiSWV1xZG/EwYWO3KCmKebaEghlydCefUGWqDCNGvHVyQgHvMmyzIBvbmA7A=', 'timestamp': 1655625289}
+2022-06-19 15:54:49,172 py30 INFO handle_requests.py-51 line：响应状态码为：200
+2022-06-19 15:54:49,172 py30 INFO handle_requests.py-52 line：响应数据为：{'code': 1, 'msg': '竞标期限为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2022-06-19 15:54:49,177 py30 INFO handle_data.py-44 line：正则表达式替换完成之后的请求数据：
+{'case_id': 9, 'type': 'case', 'interface': 'add', 'title': '加标失败—借款人id不是当前登录用户', 'method': 'post', 'url': '/loan/add', 'request_data': '{"member_id":72+1,"title":"借钱实现财富自由","amount":2000,"loan_rate":12.0,"loan_term":3,"loan_date_type":1,"bidding_days":5}', 'extract_data': None, 'expected': '{"code":1007,"msg":"无权限访问，请检查参数"}', 'check_sql': None}
+2022-06-19 15:54:49,177 py30 INFO handle_requests.py-33 line：发起一次HTTP请求
+2022-06-19 15:54:49,178 py30 INFO handle_requests.py-41 line：请求头为：{'X-Lemonban-Media-Type': 'lemonban.v3', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjcyLCJleHAiOjE2NTU2MjU1ODl9.VrTGdpGGxZyMOUmmlTs5AFFUbA1z6ae-8kspWZZd8zSDVzhm4QVud4-Eh-Tcn3Is0WOsFouowy_bq-ScE3SuCQ'}
+2022-06-19 15:54:49,178 py30 INFO handle_requests.py-42 line：请求方法为：post
+2022-06-19 15:54:49,178 py30 INFO handle_requests.py-43 line：请求url为：http://api.lemonban.com/futureloan/loan/add
+2022-06-19 15:54:49,178 py30 INFO handle_requests.py-44 line：请求数据为：{'member_id': 73, 'title': '借钱实现财富自由', 'amount': 2000, 'loan_rate': 12.0, 'loan_term': 3, 'loan_date_type': 1, 'bidding_days': 5, 'sign': 'Adxcm8bJFAxH/YawqOA+lCDGjptaMSCCjZ6+KT4meebtiqBL8QI6UivF25P8NFd00e5EXo9VVRrxjvfLigQfSD2LLjy5K+9GC8UlQ6UJGCEoprFCCcb5xUer6T60HKA0XIszALor8CT8Ohk4PpXtKi1mcz5Xotyztdyy/xhUQJI=', 'timestamp': 1655625289}
+2022-06-19 15:54:49,245 py30 INFO handle_requests.py-51 line：响应状态码为：200
+2022-06-19 15:54:49,246 py30 INFO handle_requests.py-52 line：响应数据为：{'code': 1007, 'msg': '无权限访问，请检查参数', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2022-06-19 15:54:49,251 py30 INFO handle_data.py-44 line：正则表达式替换完成之后的请求数据：
+{'case_id': 10, 'type': 'case', 'interface': 'add', 'title': '加标失败—借款金额为负数', 'method': 'post', 'url': '/loan/add', 'request_data': '{"member_id":72,"title":"借钱实现财富自由","amount":-2000,"loan_rate":12.0,"loan_term":3,"loan_date_type":1,"bidding_days":5}', 'extract_data': None, 'expected': '{"code":2,"msg":"借款金额范围错误"}', 'check_sql': None}
+2022-06-19 15:54:49,251 py30 INFO handle_requests.py-33 line：发起一次HTTP请求
+2022-06-19 15:54:49,252 py30 INFO handle_requests.py-41 line：请求头为：{'X-Lemonban-Media-Type': 'lemonban.v3', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjcyLCJleHAiOjE2NTU2MjU1ODl9.VrTGdpGGxZyMOUmmlTs5AFFUbA1z6ae-8kspWZZd8zSDVzhm4QVud4-Eh-Tcn3Is0WOsFouowy_bq-ScE3SuCQ'}
+2022-06-19 15:54:49,252 py30 INFO handle_requests.py-42 line：请求方法为：post
+2022-06-19 15:54:49,252 py30 INFO handle_requests.py-43 line：请求url为：http://api.lemonban.com/futureloan/loan/add
+2022-06-19 15:54:49,252 py30 INFO handle_requests.py-44 line：请求数据为：{'member_id': 72, 'title': '借钱实现财富自由', 'amount': -2000, 'loan_rate': 12.0, 'loan_term': 3, 'loan_date_type': 1, 'bidding_days': 5, 'sign': 'PRJFFHvNDiwEJSKkVSQ7K6qmHkvjSa6Jce5rL5Xf35QOrRuEpF5Cu6EZXn+rfeJLXfdkfGWVOGqq7n6Lstskkqh53vfqfoCdPLCsgdVJlP+25fmRVLzSa06uo3WQhriw9pUaWVzZz9SpAkbGLBZh2hEoiHjMGoHIsoB16S5Ad6w=', 'timestamp': 1655625289}
+2022-06-19 15:54:49,328 py30 INFO handle_requests.py-51 line：响应状态码为：200
+2022-06-19 15:54:49,329 py30 INFO handle_requests.py-52 line：响应数据为：{'code': 2, 'msg': '借款金额范围错误', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2022-06-19 15:54:49,337 py30 INFO handle_data.py-44 line：正则表达式替换完成之后的请求数据：
+{'case_id': 11, 'type': 'case', 'interface': 'add', 'title': '加标失败—借款金额为小数', 'method': 'post', 'url': '/loan/add', 'request_data': '{"member_id":72,"title":"借钱实现财富自由","amount":2000.1,"loan_rate":12.0,"loan_term":3,"loan_date_type":1,"bidding_days":5}', 'extract_data': None, 'expected': '{"code":2,"msg":"借款金额范围错误"}', 'check_sql': None}
+2022-06-19 15:54:49,338 py30 INFO handle_requests.py-33 line：发起一次HTTP请求
+2022-06-19 15:54:49,339 py30 INFO handle_requests.py-41 line：请求头为：{'X-Lemonban-Media-Type': 'lemonban.v3', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjcyLCJleHAiOjE2NTU2MjU1ODl9.VrTGdpGGxZyMOUmmlTs5AFFUbA1z6ae-8kspWZZd8zSDVzhm4QVud4-Eh-Tcn3Is0WOsFouowy_bq-ScE3SuCQ'}
+2022-06-19 15:54:49,339 py30 INFO handle_requests.py-42 line：请求方法为：post
+2022-06-19 15:54:49,340 py30 INFO handle_requests.py-43 line：请求url为：http://api.lemonban.com/futureloan/loan/add
+2022-06-19 15:54:49,340 py30 INFO handle_requests.py-44 line：请求数据为：{'member_id': 72, 'title': '借钱实现财富自由', 'amount': 2000.1, 'loan_rate': 12.0, 'loan_term': 3, 'loan_date_type': 1, 'bidding_days': 5, 'sign': 'rWRsHIWJRJHwvTV8sdfrmFUYtS+A+jWxA+Bk038Rp7rxR8q1VW3mfbP7S6dVKYbMtdkM4Kct61DgOYESDYlkKrqHIIyiP0kuAol5eaXhs7AaGrZb0b4mVj/Z1xb+r+bw8gi3HI9vkXPuJttX8GXTk1A+aIFmxyvsg/Wb8TZCRwI=', 'timestamp': 1655625289}
+2022-06-19 15:54:49,408 py30 INFO handle_requests.py-51 line：响应状态码为：200
+2022-06-19 15:54:49,408 py30 INFO handle_requests.py-52 line：响应数据为：{'code': 2, 'msg': '借款金额范围错误', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2022-06-19 15:54:49,416 py30 INFO handle_data.py-44 line：正则表达式替换完成之后的请求数据：
+{'case_id': None, 'type': 'before', 'interface': 'login', 'title': '前置操作 -普通用户登陆', 'method': 'post', 'url': '/member/login', 'request_data': '{"mobile_phone":"18605671115","pwd":"123456789"}', 'extract_data': '{"member_id":"$..id","token":"$..token"}', 'expected': None, 'check_sql': None}
+2022-06-19 15:54:49,416 py30 INFO handle_requests.py-33 line：发起一次HTTP请求
+2022-06-19 15:54:49,417 py30 INFO handle_requests.py-41 line：请求头为：{'X-Lemonban-Media-Type': 'lemonban.v3', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjcyLCJleHAiOjE2NTU2MjU1ODl9.VrTGdpGGxZyMOUmmlTs5AFFUbA1z6ae-8kspWZZd8zSDVzhm4QVud4-Eh-Tcn3Is0WOsFouowy_bq-ScE3SuCQ'}
+2022-06-19 15:54:49,417 py30 INFO handle_requests.py-42 line：请求方法为：post
+2022-06-19 15:54:49,417 py30 INFO handle_requests.py-43 line：请求url为：http://api.lemonban.com/futureloan/member/login
+2022-06-19 15:54:49,417 py30 INFO handle_requests.py-44 line：请求数据为：{'mobile_phone': '18605671115', 'pwd': '123456789', 'sign': 'fdneW5W4Sa9qnItxPxfkqBA3rnM9i4nFyxK1OuRRVOVq1msezGiuv8RTB9uxaSknF4FMkhoug+XT5zwq81B6RF3c9X6WrgoHUWZmckqeo4nEzvq5Xc/ZuLzfyDFROZje6dEfPIkYu/MkZ0H0qwrkEMoTVVsrLZtqArj5gMGyB80=', 'timestamp': 1655625289}
+2022-06-19 15:54:49,508 py30 INFO handle_requests.py-51 line：响应状态码为：200
+2022-06-19 15:54:49,508 py30 INFO handle_requests.py-52 line：响应数据为：{'code': 0, 'msg': 'OK', 'data': {'id': 672, 'leave_amount': 5559404.16, 'mobile_phone': '18605671115', 'reg_name': '小柠檬', 'reg_time': '2022-06-14 08:00:03.0', 'type': 1, 'token_info': {'token_type': 'Bearer', 'expires_in': '2022-06-19 15:59:50', 'token': 'eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjY3MiwiZXhwIjoxNjU1NjI1NTkwfQ.MYHL-4H_p9_NsicJI3XqGYgOj6b80wMJwEVu40uwH9HsTAezyfO8Z5_zWv6UhChMI_NhONRZA80vjdq-68rZEA'}}, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2022-06-19 15:54:49,509 py30 INFO handle_extract_data_from_response.py-23 line：要从响应结果当中提取的数据集为：
+{'member_id': '$..id', 'token': '$..token'}
+2022-06-19 15:54:49,509 py30 INFO handle_extract_data_from_response.py-29 line：设置环境变量.key:member_id,value:672
+2022-06-19 15:54:49,510 py30 INFO handle_extract_data_from_response.py-29 line：设置环境变量.key:token,value:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjY3MiwiZXhwIjoxNjU1NjI1NTkwfQ.MYHL-4H_p9_NsicJI3XqGYgOj6b80wMJwEVu40uwH9HsTAezyfO8Z5_zWv6UhChMI_NhONRZA80vjdq-68rZEA
+2022-06-19 15:54:49,513 py30 INFO conftest.py-22 line：************** 接口 结束测试 ************
+2022-06-19 15:54:49,528 py30 INFO conftest.py-26 line：************** 接口 开始测试业务流 ************
+2022-06-19 15:54:50,745 py30 INFO handle_data.py-44 line：正则表达式替换完成之后的请求数据：
+{'id': 1, 'title': '注册', 'method': 'post', 'url': '/member/register', 'request_data': '{"mobile_phone":"13175504484","pwd":"123456789","type":0,"reg_name":"美丽可爱的小简"}', 'extract_data': None}
+2022-06-19 15:54:50,746 py30 INFO handle_requests.py-33 line：发起一次HTTP请求
+2022-06-19 15:54:50,746 py30 INFO handle_requests.py-41 line：请求头为：{'X-Lemonban-Media-Type': 'lemonban.v3', 'Content-Type': 'application/json'}
+2022-06-19 15:54:50,746 py30 INFO handle_requests.py-42 line：请求方法为：post
+2022-06-19 15:54:50,747 py30 INFO handle_requests.py-43 line：请求url为：http://api.lemonban.com/futureloan/member/register
+2022-06-19 15:54:50,747 py30 INFO handle_requests.py-44 line：请求数据为：{'mobile_phone': '13175504484', 'pwd': '123456789', 'type': 0, 'reg_name': '美丽可爱的小简'}
+2022-06-19 15:54:50,830 py30 INFO handle_requests.py-51 line：响应状态码为：200
+2022-06-19 15:54:50,831 py30 INFO handle_requests.py-52 line：响应数据为：{'code': 0, 'msg': 'OK', 'data': {'id': 15219, 'reg_name': '美丽可爱的小简', 'mobile_phone': '13175504484'}, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2022-06-19 15:54:51,854 py30 INFO handle_data.py-44 line：正则表达式替换完成之后的请求数据：
+{'id': 2, 'title': '登录', 'method': 'post', 'url': '/member/login', 'request_data': '{"mobile_phone":"13175504484","pwd":"123456789"}', 'extract_data': '{"member_id":"$..id","token":"$..token"}'}
+2022-06-19 15:54:51,855 py30 INFO handle_requests.py-33 line：发起一次HTTP请求
+2022-06-19 15:54:51,855 py30 INFO handle_requests.py-41 line：请求头为：{'X-Lemonban-Media-Type': 'lemonban.v3', 'Content-Type': 'application/json'}
+2022-06-19 15:54:51,855 py30 INFO handle_requests.py-42 line：请求方法为：post
+2022-06-19 15:54:51,856 py30 INFO handle_requests.py-43 line：请求url为：http://api.lemonban.com/futureloan/member/login
+2022-06-19 15:54:51,856 py30 INFO handle_requests.py-44 line：请求数据为：{'mobile_phone': '13175504484', 'pwd': '123456789'}
+2022-06-19 15:54:51,927 py30 INFO handle_requests.py-51 line：响应状态码为：200
+2022-06-19 15:54:51,928 py30 INFO handle_requests.py-52 line：响应数据为：{'code': 0, 'msg': 'OK', 'data': {'id': 15219, 'leave_amount': 0.0, 'mobile_phone': '13175504484', 'reg_name': '美丽可爱的小简', 'reg_time': '2022-06-19 15:54:51.0', 'type': 0, 'token_info': {'token_type': 'Bearer', 'expires_in': '2022-06-19 15:59:52', 'token': 'eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE1MjE5LCJleHAiOjE2NTU2MjU1OTJ9.kleYulEcTJqbGqp7r2RxNZx7mFLo6hDK9J5XxHzV-q-i1HKRyGRK7tcXuaH09mvFsm-A5DAgVC4lplAEOk4O5w'}}, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2022-06-19 15:54:51,928 py30 INFO handle_extract_data_from_response.py-23 line：要从响应结果当中提取的数据集为：
+{'member_id': '$..id', 'token': '$..token'}
+2022-06-19 15:54:51,929 py30 INFO handle_extract_data_from_response.py-29 line：设置环境变量.key:member_id,value:15219
+2022-06-19 15:54:51,929 py30 INFO handle_extract_data_from_response.py-29 line：设置环境变量.key:token,value:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE1MjE5LCJleHAiOjE2NTU2MjU1OTJ9.kleYulEcTJqbGqp7r2RxNZx7mFLo6hDK9J5XxHzV-q-i1HKRyGRK7tcXuaH09mvFsm-A5DAgVC4lplAEOk4O5w
+2022-06-19 15:54:52,947 py30 INFO handle_data.py-44 line：正则表达式替换完成之后的请求数据：
+{'id': 3, 'title': '充值', 'method': 'post', 'url': 'member/recharge', 'request_data': '{"member_id": 15219,"amount":600}', 'extract_data': None}
+2022-06-19 15:54:52,947 py30 INFO handle_requests.py-33 line：发起一次HTTP请求
+2022-06-19 15:54:52,949 py30 INFO handle_requests.py-41 line：请求头为：{'X-Lemonban-Media-Type': 'lemonban.v3', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjE1MjE5LCJleHAiOjE2NTU2MjU1OTJ9.kleYulEcTJqbGqp7r2RxNZx7mFLo6hDK9J5XxHzV-q-i1HKRyGRK7tcXuaH09mvFsm-A5DAgVC4lplAEOk4O5w'}
+2022-06-19 15:54:52,949 py30 INFO handle_requests.py-42 line：请求方法为：post
+2022-06-19 15:54:52,949 py30 INFO handle_requests.py-43 line：请求url为：http://api.lemonban.com/futureloan/member/recharge
+2022-06-19 15:54:52,949 py30 INFO handle_requests.py-44 line：请求数据为：{'member_id': 15219, 'amount': 600, 'sign': 'TMHwPBaZl/s/jYCQf//JgXCOahwdQ98SMHNjGxDsJB94/YATM8+9+YJaNfN6mbP4+rK36LvUbpjUneJIT2U6ZNAFGLrpa6A+pCTkHesYokiK3/hhuTWsqmrrpgW6+gpKl7mnBk+jgAzOW6VGmFxpDdnIPwqE027oYBmWyg+zMqk=', 'timestamp': 1655625292}
+2022-06-19 15:54:53,019 py30 INFO handle_requests.py-51 line：响应状态码为：200
+2022-06-19 15:54:53,019 py30 INFO handle_requests.py-52 line：响应数据为：{'code': 0, 'msg': 'OK', 'data': {'id': 15219, 'leave_amount': 600.0, 'mobile_phone': '13175504484', 'reg_name': '美丽可爱的小简', 'reg_time': '2022-06-19 15:54:51.0', 'type': 0}, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2022-06-19 15:54:53,023 py30 INFO conftest.py-33 line：************** 接口 结束测试业务流 ************
